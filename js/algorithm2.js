@@ -9,10 +9,19 @@ let yt = 0;
 // Will add option to change freq and color
 let freq = 0.2;
 
+// Color
+let primcolor = localStorage.getItem("primcolor");
+let bgcolor = localStorage.getItem("bgcolor");
+
+// Resolution
+let width = localStorage.getItem("width");
+let height = localStorage.getItem("height");
+
+
 function setup() {
 	// Background
-	createCanvas(1240, 720, WEBGL);
-	background('black');
+	createCanvas(width, height, WEBGL);
+	background(bgcolor);
 
 	let theta = 0;
 
@@ -38,9 +47,9 @@ function setup() {
 		translate(xt, yt);
 
 		// Set box colors and line width
-		stroke('gray');
+		stroke(primcolor);
 		strokeWeight(2);
-		fill('black');
+		fill(bgcolor);
 
 		// Create box
 		box(w*sin(theta), h*cos(theta), d*sin(theta));

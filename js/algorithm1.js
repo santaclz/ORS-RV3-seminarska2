@@ -9,9 +9,17 @@ let yt = Math.floor(Math.random() * 11) - 5;	// -5 - 5
 // Will add option to change freq and color
 let freq = 0.2;
 
+// Color
+let primcolor = localStorage.getItem("primcolor");
+let bgcolor = localStorage.getItem("bgcolor");
+
+// Resolution
+let width = localStorage.getItem("width");
+let height = localStorage.getItem("height");
+
 function setup() {
-	createCanvas(1240, 720, WEBGL);
-	background('black');
+	createCanvas(width, height, WEBGL);
+	background(bgcolor);
 	let theta = 0;
 
 	for (let i=0; i<100; i++) {
@@ -22,7 +30,7 @@ function setup() {
 
 		// Color every fifth line
 		if (i % 5 == 0) {
-			stroke('#fae');
+			stroke(primcolor);
 			strokeWeight(5);
 		} else {
 			stroke('white');

@@ -1,12 +1,48 @@
 <html>
 	<head>
  		<script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+		<script src="js/algorithms.js"></script>
  	</head>
 
 	<body>
-		<h1>First algorithm</h1>
-		<a href="spiral.html">Spiral</a>
-		<h1>Second algorithm</h1>
-		<a href="block_city.html">Block city</a>
+		<div>
+			<p>Choose wallpaper colors:</p>
+
+			<div>
+				<input type="color" id="primary" name="primary"
+				value="#9966ff">
+				<label for="head">Primary</label>
+			</div>
+
+			<div>
+				<input type="color" id="background" name="background"
+				value="#000000">
+				<label for="body">Background</label>
+			</div>
+		</div>
+		<div>
+			<p>Choose resolution:</p>
+
+			<!--<input list="resolutions" name="res" id="res" autocomplete="on">
+			<datalist id="resolutions">
+			       	<option value="3840×2160">
+			       	<option value="2560×1440">
+			       	<option value="1920×1080">
+			       	<option value="1280×720">
+			</datalist> -->
+			<input type="text" id="screenwidth" value="1280">
+			<input type="text" id="screenheight" value="720">
+
+			<button onclick=spiral()>
+				Generate Spiral
+			</button>
+			<button onclick=blocks()>
+				Generate Blocks
+			</button>
+		</div>
+
+		<iframe width="100%" height="100%" style="border:5px; zoom:10%"></iframe>	
+
 	</body>
 </html>
