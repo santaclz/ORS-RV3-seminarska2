@@ -6,8 +6,8 @@ let y = Math.floor(Math.random() * 101);	// 0 - 100
 let xt = Math.floor(Math.random() * 11) - 5;	// -5 - 5
 let yt = Math.floor(Math.random() * 11) - 5;	// -5 - 5
 
-// Will add option to change freq and color
-let freq = 0.2;
+// Frequency
+let freq = localStorage.getItem("freq") / 100;
 
 // Color
 let primcolor = localStorage.getItem("primcolor");

@@ -6,8 +6,8 @@ let d = Math.floor(Math.random() * 491) + 10;	// 10 - 500
 let xt = 0;
 let yt = 0;
 
-// Will add option to change freq and color
-let freq = 0.2;
+// Frequency
+let freq = localStorage.getItem("freq") / 100;
 
 // Color
 let primcolor = localStorage.getItem("primcolor");
