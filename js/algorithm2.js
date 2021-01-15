@@ -25,7 +25,7 @@ function setup() {
 
 	let theta = 0;
 
-	let inc_y = true;
+	let inc_y = false;
 
 	// Go to left upper corner
 	translate(-width/2, -height/2);
